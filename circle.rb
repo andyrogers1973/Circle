@@ -5,11 +5,15 @@ class Circle
     @radius = radius
   end
 
-  def calculation
-    calculation = (@radius * 3.141592653).to_s + " cm squared"
-    calculation
+  attr_reader :colour
+  attr_writer :colour
+
+  def description
+    description = (@radius * 3.1415).to_s + " cm2"
+    description
   end
 end
 
-area = Circle.new(5)
-puts area.calculation
+area = Circle.new(10)
+area.colour = "Red"
+puts area.colour, area.description

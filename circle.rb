@@ -9,7 +9,7 @@ class Circle
   attr_writer :colour
 
   def description
-    description = "A circle with area " + ((@radius * @radius) * 3.1415).to_s + "cm2 and its colour is " + @colour
+    description = "A circle with area " + ((@radius**2)* Math::PI).to_s + "cm2 and its colour is " + @colour
     description
   end
 end

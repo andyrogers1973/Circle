@@ -5,12 +5,14 @@ class Circle
     @radius = radius
   end
 
-  attr_reader :colour
-  attr_writer :colour
+  attr_accessor :colour
+
+  def calculation
+    (@radius**2)*Math::PI
+  end
 
   def description
-    description = "A circle with area " + ((@radius**2)* Math::PI).to_s + "cm2 and its colour is " + @colour
-    description
+    "A circle with area " + calculation.round(2).to_s + "cm2 and its colour is " + @colour
   end
 end
 
